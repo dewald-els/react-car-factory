@@ -1,0 +1,20 @@
+.CarFactoryBuild {
+    background: var(--col-darkish);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: .25rem;
+    border: 2px solid var(--col-darkish-border);
+}
+.CarFactoryBuild h2 {
+    margin: 0;
+}
+.CarFactoryBuildButton {
+    background: rgb(110, 110, 212);
+    color: inherit;
+    font-size: 1.25rem;
+    padding: 1.5rem 2rem;
+    border-radius: .25rem;
+    border: 2px solid white;
+    margin: 1rem 0 0;
+    font-weight: bold;
+}
