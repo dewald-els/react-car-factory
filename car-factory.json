@@ -1,0 +1,110 @@
+{
+    "types": [
+        {
+            "id": 1,
+            "name": "Sedan"
+        },
+        {
+            "id": 2,
+            "name": "Hatchback"
+        },
+        {
+            "id": 3,
+            "name": "Station Wagon"
+        },
+        {
+            "id": 4,
+            "name": "SUV"
+        },
+        {
+            "id": 5,
+            "name": "Sports"
+        }
+    ],
+    "colours": [
+        {
+            "id": 1,
+            "displayName": "Red hot",
+            "hex": "#d10300"
+        },
+        {
+            "id": 2,
+            "displayName": "Ocean breeze",
+            "hex": "#00d17d"
+        },
+        {
+            "id": 3,
+            "displayName": "Gold dust",
+            "hex": "#d1b900"
+        },
+        {
+            "id": 4,
+            "displayName": "Silver Surfer",
+            "hex": "#cccccc"
+        },
+        {
+            "id": 5,
+            "displayName": "Kinda Black",
+            "hex": "#0a0a0a"
+        },
+        {
+            "id": 6,
+            "displayName": "Boring Grey",
+            "hex": "#424242"
+        }
+    ],
+    "engine-sizes": [
+        {
+            "id": 1,
+            "size": 1.4
+        },
+        {
+            "id": 2,
+            "size": 1.6
+        },
+        {
+            "id": 3,
+            "size": 1.8
+        },
+        {
+            "id": 4,
+            "size": 2.0
+        },
+        {
+            "id": 5,
+            "size": 4.0
+        },
+        {
+            "id": 6,
+            "size": 4.7
+        }
+    ],
+    "rims": [
+        {
+            "id": 1,
+            "type": "Standard"
+        },
+        {
+            "id": 2,
+            "type": "Wheel Cover"
+        },
+        {
+            "id": 3,
+            "type": "Fancy"
+        }
+    ],
+    "seats": [
+        {
+            "id": 1,
+            "material": "Polyester"
+        },
+        {
+            "id": 2,
+            "material": "Leather-ish"
+        },
+        {
+            "id": 3,
+            "material": "Leather"
+        }
+    ]
+}
