@@ -1,0 +1,11 @@
+.CarRimsList {
+    display: grid;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: var(--default-grid-gap);
+}
+.CarRimsListItem {
+    text-align: center;
+}
