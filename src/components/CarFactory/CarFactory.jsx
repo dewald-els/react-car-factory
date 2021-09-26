@@ -14,10 +14,10 @@ const carFactorySectionComponents = {
 }
 
 const CarFactory = () => {
-    
+
     const [currentSection, setCurrentSection] = useState('')
 
-    const DynamicComponent = carFactorySectionComponents[currentSection]
+    const SectionComponent = carFactorySectionComponents[currentSection]
 
     return (
         <main>
@@ -27,7 +27,7 @@ const CarFactory = () => {
                 <CarFactorySections
                     sectionClicked={(section) => setCurrentSection(section)} />
 
-                {currentSection && <DynamicComponent />}
+                {currentSection && <SectionComponent />}
             </AppContainer>
         </main>
     )

@@ -17,6 +17,7 @@ code {
 :root {
   --col-dark: #12121a;
   --col-darkish: #1c1c29;
+  --col-darkish-border: #252536;
   --col-text: #f5f5f5;
   --default-grid-gap: 1.5rem;
 }

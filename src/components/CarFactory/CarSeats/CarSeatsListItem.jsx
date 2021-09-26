@@ -7,10 +7,10 @@ const CarSeatsListItem = ({ carSeat }) => {
     const image = `img/seats/${carSeat.id}.svg`
     const alt = `${carSeat.material} seat option`
 
-    const setSelectedSeats = useStore(state => state.setSelectedSeats)
+    const setSectionSelectedValue = useStore(state => state.setSectionSelectedValue)
 
     const handleClick = () => {
-        setSelectedSeats(carSeat)
+        setSectionSelectedValue('seats', carSeat)
     }
 
     return (

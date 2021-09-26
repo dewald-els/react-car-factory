@@ -1,20 +1,22 @@
 import useStore from "../../../store/store"
+import CarFactorySectionItem from "./CarFactorySectionItem"
+import styles from './CarFactorySections.module.css'
 
-const sections = ['types', 'colours', 'seats', 'rims']
+const sectionSelector = state => state.carFactorySections
+
 const CarFactorySections = ({ sectionClicked }) => {
 
-    const selectedCarType = useStore(state => state.selectedCarType)
-
-    console.log(selectedCarType);
+    const sections = useStore(sectionSelector)
     
     const carFactorySectionList = sections.map(carSection =>
-        <button onClick={() => sectionClicked(carSection)} key={ carSection }>
-            <b>Car {carSection}</b>
-        </button>
+        <CarFactorySectionItem 
+            sectionItemClicked={() => sectionClicked(carSection.name)} 
+            carSection={ carSection }
+            key={ carSection.name } />
     )
 
     return (
-        <ul>
+        <ul className={ styles.CarFactorySections }>
             {carFactorySectionList}
         </ul>
     )

@@ -5,11 +5,10 @@ const CarTypesListItem = ({ carType }) => {
     const image = `img/types/${carType.id}.svg`
     const alt = `${carType.name} car type`
 
-    const setSelectedCarType = useStore(state => state.setSelectedCarType)
+    const setSectionSelectedValue = useStore(state => state.setSectionSelectedValue)
 
     const handleClick = () => {
-        console.log('Clicked');
-        setSelectedCarType(carType)
+        setSectionSelectedValue('types', carType)
     }
 
     return (

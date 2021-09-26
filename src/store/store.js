@@ -5,22 +5,36 @@ import { findAllCarSeats } from "../api/carSeats";
 import { findAllCarTypes } from "../api/carTypes";
 
 const useStore = create((set, get) => ({
-    selectedCarType: null,
-    selectedCarSeats: null,
-    selectedCarRims: null,
-    selectedCarColour: null,
+    carFactorySections: [
+        {
+            name: 'types',
+            selectedValue: null
+        },
+        {
+            name: 'seats',
+            selectedValue: null
+        },
+        {
+            name: 'rims',
+            selectedValue: null
+        },
+        {
+            name: 'colours',
+            selectedValue: null
+        }
+    ],
     // Configure Actions
-    setSelectedCarType: selectedCarType => {
-        set({ selectedCarType })
-    },
-    setSelectedCarSeats: selectedCarSeats => {
-        set({ selectedCarSeats })
-    },
-    setSelectedCarRims: selectedCarRims => {
-        set({ selectedCarRims })
-    },
-    setSelectedCarColour: selectedCarColour => {
-        set({ selectedCarColour })
+    setSectionSelectedValue: (sectionName, selectedCarType) => {
+        const carFactorySections = [...get().carFactorySections].map(section => {
+            if (section.name === sectionName) {
+                return {
+                    ...section,
+                    selectedValue: selectedCarType
+                }
+            }
+            return section
+        })
+        set({ carFactorySections })
     },
     // Car Types
     carTypes: [],

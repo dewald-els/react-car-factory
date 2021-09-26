@@ -1,18 +1,21 @@
+import useStore from '../../../store/store'
+import ColouredSquare from '../../shared/ColouredSquare'
 import styles from './CarColours.module.css'
 
 const CarColoursListItem = ({ carColour }) => {
-    const boxColourStyle = {
-        width: '50px',
-        height: '50px',
-        borderRadius: '.25rem',
-        backgroundColor: carColour.hex,
-        border: '2px solid white',
-        margin: '0 auto'
+    
+
+
+    const setSectionSelectedValue = useStore(state => state.setSectionSelectedValue)
+
+    const handleClick = () => {
+        setSectionSelectedValue('colours', carColour)
     }
+
     return (
-        <li className={ styles.CarColoursListItem }>
+        <li className={ styles.CarColoursListItem } onClick={ handleClick }>
             <h4>{ carColour.displayName }</h4>
-            <div style={ boxColourStyle }></div>
+            <ColouredSquare colourHex={ carColour.hex } />
         </li>
     )
 }
