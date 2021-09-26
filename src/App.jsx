@@ -1,6 +1,7 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import './App.css'
 import CarFactory from './components/CarFactory/CarFactory'
+import CarFactoryOuput from './components/CarFactory/CarFactoryOuput/CarFactoryOuput'
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Switch>
-          <Route path="/factory" component={ CarFactory } />
+          <Route path="/factory" exact component={ CarFactory } />
+          <Route path="/factory/complete" component={ CarFactoryOuput } />
         </Switch>
       </div>
     </BrowserRouter>
