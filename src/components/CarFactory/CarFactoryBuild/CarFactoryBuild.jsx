@@ -28,7 +28,7 @@ const CarFactoryBuild = () => {
                                 Build your car
                     </button>
                     { building &&
-                        <p>Where's busy building your car...</p>
+                        <p>We're busy building your car...</p>
                     }
                 </section>
             }
